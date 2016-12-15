@@ -1,0 +1,135 @@
+  <div id="edit-site" tabindex="-1" role="dialog">
+    <div class="container">
+      <h1>Edit Site</h1>
+      {{#link-to "dashboard.index" class="btn btn-warning"}}<i class="fa fa-arrow-circle-left"></i> Back to Dashboard{{/link-to}}
+      <form class="grid-form">
+        <fieldset>
+          <legend>Site</legend>
+          <div data-row-span="3">
+            <div data-field-span="2">
+              <label>Site Title</label>
+              <input type="text" name="siteTitle" >
+            </div>
+            <div data-field-span="1">
+              <label>Domain</label>
+              <input type="text"  placeholder="e.g., servicebay.ca" name='domain'>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Company</legend>
+          <div data-row-span="1">
+            <div data-field-span="1">
+              <label>Business Name</label>
+              <input type="text" placeholder="e.g., ServiceBay" name='companyName'>
+            </div>
+          </div>
+          <div data-row-span="3">
+            <div data-field-span="2">
+              <label>Address</label>
+              <input type="text" name='companyAddress'>
+            </div>
+            <div data-field-span="1">
+              <label>City</label>
+              <input type="text" name='companyCity'>
+            </div>
+          </div>
+          <div data-row-span="3">
+            <div data-field-span="1">
+              <label>Province / State</label>
+              <input type="text" name='companyState'>
+            </div>
+            <div data-field-span="1">
+              <label>Postal Code / ZIP</label>
+              <input type="text" name='companyPostal'>
+            </div>
+            <div data-field-span="1">
+              <label>Country</label>
+              <input type="text" name='companyCountry'>
+            </div>
+          </div>
+          <div data-row-span="3">
+            <div data-field-span="1">
+              <label>Business Phone</label>
+              <input type="text" name='companyPhone'>
+            </div>
+            <div data-field-span="1">
+              <label>Business Fax</label>
+              <input type="text" name='companyFax'>
+            </div>
+            <div data-field-span="1">
+              <label>Business Email</label>
+              <input type="email" placeholder="e.g., name@gmail.com" name='companyEmail'>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Social Media</legend>
+          <div data-row-span="3">
+            <div data-field-span="1">
+              <label>Business Facebook Page</label>
+              <input type="text" placeholder="Facebook Page URL" name='companyFacebook'>
+            </div>
+            <div data-field-span="1">
+              <label>Business Twitter User</label>
+              <input type="text" placeholder="e.g., servicebay" name='companyTwitter'>
+            </div>
+            <div data-field-span="1">
+              <label>Business Yelp Page</label>
+              <input type="text" placeholder="Yelp Page URL" name='companyYelp'>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Look & Feel</legend>
+          <div data-row-span="1">
+            <div data-field-span="1">
+              <label>Theme</label>
+              <input type="text" name="siteTheme">
+            </div>
+          </div>
+          <div data-row-span="1">
+            <div data-field-span="1">
+              <label>Site Logo</label>
+              <input type="file" name='siteLogo'>
+            </div>
+          </div>
+          <div data-row-span="1">
+            <div data-field-span="1">
+              <label>Splash Image</label>
+              <input type="file" name='homeSplash'>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Page Content</legend>
+          <div data-row-span="1">
+            <div data-field-span="1">
+              <label>Homepage Introduction</label>
+              <textarea type="texta" name='homeIntro' placeholder="Introduce us to your company..." rows=6></textarea>
+            </div>
+          </div>
+          <div data-row-span="1">
+            <div data-field-span="1">
+              <label>Services Introduction</label>
+              <textarea name='servicesIntro' placeholder="Introduce your services and what you do..." rows=6></textarea>
+            </div>
+          </div>
+          <div data-row-span="1">
+            <div data-field-span="1">
+              <label>About Introduction</label>
+              <textarea name='aboutIntro' placeholder="Write something about your company..." rows=6></textarea>
+            </div>
+          </div>
+          <div data-row-span="1">
+            <div data-field-span="1">
+              <label>Contact Introduction</label>
+              <textarea name='contactIntro' placeholder="Tell us how to contact you..." rows=6></textarea>
+            </div>
+          </div>
+        </fieldset>
+        <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save Changes</button> {{#link-to "dashboard.index" class="btn btn-link"}}<i class="fa fa-arrow-circle-left"></i> Back to Dashboard{{/link-to}}
+
+      </form>
+    </div>
+  </div>

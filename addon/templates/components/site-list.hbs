@@ -1,0 +1,18 @@
+<h3>Your Sites</h3>
+  {{#each sites as |site| }}
+    <div class="site">
+      <div class="site-content">
+        <h4><a href="http://{{site.fieldDomain}}" target="_blank">{{site.title}}</a></h4>
+        <div class="site-url"><a href="http://{{site.fieldDomain}}" target="_blank">{{site.fieldDomain}}</a></div>
+        <div class="site-actions">
+          <a href="http://{{site.fieldDomain}}" class="btn btn-primary" target="_blank"><i class="fa fa-eye"></i> View Live Site</a>
+          {{#link-to "dashboard.sites.edit" class="btn btn-success wysiwygThis"}}<i class="fa fa-building"></i> Build Your Site{{/link-to}}
+          {{#link-to "dashboard.sites.edit" class="btn btn-link"}}<i class="fa fa-building"></i> Admin Edit{{/link-to}}
+        </div>
+      </div>
+    </div>
+  {{else}}
+    <div>
+      <p class="alert alert-info">You do not have any sites yet. {{#link-to "dashboard.sites.create"}}Create your first site.{{/link-to}}</p>
+    </div>
+  {{/each}}

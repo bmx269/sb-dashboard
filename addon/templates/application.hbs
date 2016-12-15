@@ -1,0 +1,36 @@
+<div id="content-wrapper">
+  <div class="container">
+    <h1>Dashboard</h1>
+    <div class="intro">
+      {{#if session.isAuthenticated}}
+      <p>You are currently logged as: {{session.data.authenticated.profile.email}}
+        <br /> UserID: {{session.data.authenticated.profile.user_id}} <br/> 
+      </p>
+      {{/if}}
+      
+      <p>Your Dashboard is where you can manage your all aspects of
+        your website. From Feature changes, Billing/Plan details,
+        to the adjustment of your website's Appearance,
+        your Dashboard covers everything you need for your account.</p>
+    </div>
+  </div>
+</div>
+<div id="dashboard-wrapper">
+  <div class="container">
+    {{outlet}}
+    <div id="subscriptions">
+      <h2>Manage Websites</h2>
+      <p>Here is a list of the current sites in your account. You can have as many sites as you like, but only active subscriptions will be published for visitors to view.</p>
+        <p>
+          {{#link-to "dashboard.sites.create" class="btn btn-danger"}}<i class="fa fa-plus-square"></i> Create New Site{{/link-to}}
+          {{#link-to "dashboard.sites.create" class="btn btn-link"}}<i class="fa fa-plus-square"></i> Admin Create Site{{/link-to}}
+        </p>
+      <div class="sites">
+        {{site-list sites=model}}
+      </div>
+    </div>
+    <div id="invoices">
+      {{!-- {{> invoices}} --}}
+    </div>
+  </div>
+</div>
