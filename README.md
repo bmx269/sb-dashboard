@@ -1,5 +1,7 @@
 # sb-dashboard
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/bmx269/sb-dashboard.svg)](https://greenkeeper.io/)
+
 This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
